@@ -16,8 +16,8 @@
  */
 package com.noctarius.lazylog.impl;
 
-import com.noctarius.tengi.spi.logging.Logger;
-import com.noctarius.tengi.spi.logging.LoggerFactory;
+import com.noctarius.lazylog.Logger;
+import com.noctarius.lazylog.LoggerFactory;
 
 public class SysOutLoggerFactory
         implements LoggerFactory {

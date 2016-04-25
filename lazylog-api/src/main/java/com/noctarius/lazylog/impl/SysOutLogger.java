@@ -16,8 +16,8 @@
  */
 package com.noctarius.lazylog.impl;
 
-import com.noctarius.tengi.spi.logging.Level;
-import com.noctarius.tengi.spi.logging.Logger;
+import com.noctarius.lazylog.Level;
+import com.noctarius.lazylog.Logger;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
