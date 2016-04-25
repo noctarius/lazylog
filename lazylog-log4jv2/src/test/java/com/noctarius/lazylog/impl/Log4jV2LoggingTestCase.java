@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015-2016, Christoph Engelbert (aka noctarius) and
+ * Copyright (c) 2016, Christoph Engelbert (aka noctarius) and
  * contributors. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +16,7 @@
  */
 package com.noctarius.lazylog.impl;
 
-import com.noctarius.tengi.spi.logging.Logger;
+import com.noctarius.lazylog.Logger;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Appender;

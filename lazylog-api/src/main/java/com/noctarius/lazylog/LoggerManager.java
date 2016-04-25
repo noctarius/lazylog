@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015-2016, Christoph Engelbert (aka noctarius) and
+ * Copyright (c) 2016, Christoph Engelbert (aka noctarius) and
  * contributors. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,8 +16,6 @@
  */
 package com.noctarius.lazylog;
 
-import com.noctarius.tengi.core.exception.LoggerException;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ServiceLoader;
@@ -26,11 +24,11 @@ import java.util.concurrent.ConcurrentMap;
 
 /**
  * The <tt>LoggerManager</tt> is a utility class to create and cache
- * {@link com.noctarius.tengi.spi.logging.Logger} instances. It will
+ * {@link com.noctarius.lazylog.Logger} instances. It will
  * automatically scan the classpath for implementations of
- * {@link com.noctarius.tengi.spi.logging.LoggerFactory} classes using
+ * {@link com.noctarius.lazylog.LoggerFactory} classes using
  * the Java ServiceLoader API and registers each of them, however it
- * is recommended to have only one logger adapter avaialable at a
+ * is recommended to have only one logger adapter available at a
  * given time.
  */
 public final class LoggerManager {
@@ -117,7 +115,7 @@ public final class LoggerManager {
      * for another <tt>Logger</tt> instance already exists the cached instance is returned.
      *
      * @param binding    the <tt>java.lang.Class</tt> to bind to
-     * @param loggerType the {@link com.noctarius.tengi.spi.logging.Logger} type if multiple adapters are registered
+     * @param loggerType the {@link com.noctarius.lazylog.Logger} type if multiple adapters are registered
      * @return the new <tt>Logger</tt> instance or a cached one if the binding is already created
      */
     public static Logger getLogger(Class<?> binding, Class<?> loggerType) {
@@ -133,7 +131,7 @@ public final class LoggerManager {
      * for another <tt>Logger</tt> instance already exists the cached instance is returned.
      *
      * @param binding    the <tt>java.lang.String</tt> to bind to
-     * @param loggerType the {@link com.noctarius.tengi.spi.logging.Logger} type if multiple adapters are registered
+     * @param loggerType the {@link com.noctarius.lazylog.Logger} type if multiple adapters are registered
      * @return the new <tt>Logger</tt> instance or a cached one if the binding is already created
      */
     public static Logger getLogger(String binding, Class<?> loggerType) {

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015-2016, Christoph Engelbert (aka noctarius) and
+ * Copyright (c) 2016, Christoph Engelbert (aka noctarius) and
  * contributors. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,16 +22,7 @@ package com.noctarius.lazylog.util;
  */
 public final class Validate {
 
-    private static final String MESSAGE_PARAM_NOT_EQUAL = "%s must be equal to %s";
-    private static final String MESSAGE_PARAM_NOT_GREATER_THAN = "%s must be greater than %s";
-    private static final String MESSAGE_PARAM_NOT_LOWER_THAN = "%s must be lower than %s";
-    private static final String MESSAGE_PARAM_NOT_GREATER_EQUAL = "%s must be greater than or equal to %s";
-    private static final String MESSAGE_PARAM_NOT_LOWER_EQUAL = "%s must be lower than or equal to %s";
     private static final String MESSAGE_PARAM_NOT_NULL = "%s must not be null";
-
-    public static void validate(MessageBuilder messageBuilder, Validation validation) {
-        validate(messageBuilder, validation, ValidationException::new);
-    }
 
     public static void validate(MessageBuilder messageBuilder, Validation validation, ExceptionBuilder exceptionBuilder) {
         if (!validation.validate()) {
@@ -39,28 +30,8 @@ public final class Validate {
             if (exception instanceof RuntimeException) {
                 throw (RuntimeException) exception;
             }
-            ExceptionUtil.rethrow(exception);
+            throw new RuntimeException(exception);
         }
-    }
-
-    public static void equals(String paramName, int expected, int value) {
-        validate(message(MESSAGE_PARAM_NOT_EQUAL, paramName, expected), () -> expected == value);
-    }
-
-    public static void greaterThan(String paramName, int minimum, int value) {
-        validate(message(MESSAGE_PARAM_NOT_GREATER_THAN, paramName, minimum), () -> minimum < value);
-    }
-
-    public static void lowerThan(String paramName, int maximum, int value) {
-        validate(message(MESSAGE_PARAM_NOT_LOWER_THAN, paramName, maximum), () -> maximum > value);
-    }
-
-    public static void greaterOrEqual(String paramName, int minimum, int value) {
-        validate(message(MESSAGE_PARAM_NOT_GREATER_EQUAL, paramName, minimum), () -> minimum <= value);
-    }
-
-    public static void lowerOrEqual(String paramName, int maximum, int value) {
-        validate(message(MESSAGE_PARAM_NOT_LOWER_EQUAL, paramName, maximum), () -> maximum >= value);
     }
 
     public static void notNull(String paramName, Object value) {
@@ -74,15 +45,11 @@ public final class Validate {
         return () -> String.format(message, param);
     }
 
-    private static MessageBuilder message(String message, Object param1, Object param2) {
-        return () -> String.format(message, param1, param2);
-    }
-
     /**
      * The <tt>Validation</tt> interface is used to implement internal and
      * external validations based on Java 8 lambdas.
      */
-    public static interface Validation {
+    public interface Validation {
 
         /**
          * This method implements the validation logic and returns <tt>true</tt>
@@ -100,7 +67,7 @@ public final class Validate {
      * operations to be as lazy as possible and to only happen if really
      * necessary.
      */
-    public static interface MessageBuilder {
+    public interface MessageBuilder {
 
         /**
          * Generates the content and builds the exception message.
@@ -115,7 +82,7 @@ public final class Validate {
      * exception up to the point where a validation really failed and a message
      * was created.
      */
-    public static interface ExceptionBuilder {
+    public interface ExceptionBuilder {
 
         /**
          * Generates the exception using the given exceptional message
@@ -123,24 +90,6 @@ public final class Validate {
          * @return the exceptional message
          */
         Exception build(String message);
-    }
-
-    /**
-     * This exception class is thrown whenever a validation fails. It is a subclass
-     * of {@link IllegalArgumentException} since most validations happen
-     * on parameters passed to any constructor or function.
-     */
-    public static class ValidationException
-            extends IllegalArgumentException {
-
-        /**
-         * Creation of a ValidationException using an exception message string.
-         *
-         * @param s string to be used as exception message
-         */
-        protected ValidationException(String s) {
-            super(s);
-        }
     }
 
 }

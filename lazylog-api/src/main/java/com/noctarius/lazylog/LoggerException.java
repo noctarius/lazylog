@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015-2016, Christoph Engelbert (aka noctarius) and
+ * Copyright (c) 2016, Christoph Engelbert (aka noctarius) and
  * contributors. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,7 +21,7 @@ package com.noctarius.lazylog;
  * while setting up the logger framework or retrieving a logger.
  */
 public class LoggerException
-        extends SystemException {
+        extends RuntimeException {
 
     /**
      * Constructs a new instance with a given message.

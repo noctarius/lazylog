@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015-2016, Christoph Engelbert (aka noctarius) and
+ * Copyright (c) 2016, Christoph Engelbert (aka noctarius) and
  * contributors. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -84,7 +84,7 @@ public interface Logger {
     void log(Level level, Throwable throwable, String format, Object arg1, Object arg2, Object arg3, Object... args);
 
     /**
-     * Logs a <tt>message</tt> at level {@link com.noctarius.tengi.spi.logging.Level#Trace}.
+     * Logs a <tt>message</tt> at level {@link com.noctarius.lazylog.Level#Trace}.
      *
      * @param message the message to log
      * @throws NullPointerException whenever <tt>level</tt> or <tt>message</tt> is null
@@ -95,7 +95,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed <tt>arg</tt>
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Trace}.
+     * at level {@link com.noctarius.lazylog.Level#Trace}.
      *
      * @param format the format to log
      * @param arg    the argument to pass to the format
@@ -107,7 +107,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Trace}.
+     * at level {@link com.noctarius.lazylog.Level#Trace}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -120,7 +120,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Trace}.
+     * at level {@link com.noctarius.lazylog.Level#Trace}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -134,7 +134,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Trace}.
+     * at level {@link com.noctarius.lazylog.Level#Trace}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -148,7 +148,7 @@ public interface Logger {
     }
 
     /**
-     * Logs a <tt>message</tt> at level {@link com.noctarius.tengi.spi.logging.Level#Trace}. The
+     * Logs a <tt>message</tt> at level {@link com.noctarius.lazylog.Level#Trace}. The
      * given throwable will also be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -161,7 +161,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed <tt>arg</tt>
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Trace}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Trace}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -175,7 +175,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Trace}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Trace}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -190,7 +190,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Trace}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Trace}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -206,7 +206,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Trace}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Trace}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -222,7 +222,7 @@ public interface Logger {
     }
 
     /**
-     * Logs a <tt>message</tt> at level {@link com.noctarius.tengi.spi.logging.Level#Debug}.
+     * Logs a <tt>message</tt> at level {@link com.noctarius.lazylog.Level#Debug}.
      *
      * @param message the message to log
      * @throws NullPointerException whenever <tt>level</tt> or <tt>message</tt> is null
@@ -233,7 +233,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed <tt>arg</tt>
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Debug}.
+     * at level {@link com.noctarius.lazylog.Level#Debug}.
      *
      * @param format the format to log
      * @param arg    the argument to pass to the format
@@ -245,7 +245,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Debug}.
+     * at level {@link com.noctarius.lazylog.Level#Debug}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -258,7 +258,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Debug}.
+     * at level {@link com.noctarius.lazylog.Level#Debug}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -272,7 +272,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Debug}.
+     * at level {@link com.noctarius.lazylog.Level#Debug}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -286,7 +286,7 @@ public interface Logger {
     }
 
     /**
-     * Logs a <tt>message</tt> at level {@link com.noctarius.tengi.spi.logging.Level#Debug}. The
+     * Logs a <tt>message</tt> at level {@link com.noctarius.lazylog.Level#Debug}. The
      * given throwable will also be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -299,7 +299,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed <tt>arg</tt>
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Debug}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Debug}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -313,7 +313,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Debug}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Debug}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -328,7 +328,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Debug}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Debug}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -344,7 +344,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Debug}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Debug}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -360,7 +360,7 @@ public interface Logger {
     }
 
     /**
-     * Logs a <tt>message</tt> at level {@link com.noctarius.tengi.spi.logging.Level#Info}.
+     * Logs a <tt>message</tt> at level {@link com.noctarius.lazylog.Level#Info}.
      *
      * @param message the message to log
      * @throws NullPointerException whenever <tt>level</tt> or <tt>message</tt> is null
@@ -371,7 +371,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed <tt>arg</tt>
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Info}.
+     * at level {@link com.noctarius.lazylog.Level#Info}.
      *
      * @param format the format to log
      * @param arg    the argument to pass to the format
@@ -383,7 +383,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Info}.
+     * at level {@link com.noctarius.lazylog.Level#Info}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -396,7 +396,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Info}.
+     * at level {@link com.noctarius.lazylog.Level#Info}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -410,7 +410,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Info}.
+     * at level {@link com.noctarius.lazylog.Level#Info}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -424,7 +424,7 @@ public interface Logger {
     }
 
     /**
-     * Logs a <tt>message</tt> at level {@link com.noctarius.tengi.spi.logging.Level#Info}. The
+     * Logs a <tt>message</tt> at level {@link com.noctarius.lazylog.Level#Info}. The
      * given throwable will also be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -437,7 +437,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed <tt>arg</tt>
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Info}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Info}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -451,7 +451,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Info}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Info}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -466,7 +466,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Info}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Info}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -482,7 +482,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Info}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Info}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -498,7 +498,7 @@ public interface Logger {
     }
 
     /**
-     * Logs a <tt>message</tt> at level {@link com.noctarius.tengi.spi.logging.Level#Warning}.
+     * Logs a <tt>message</tt> at level {@link com.noctarius.lazylog.Level#Warning}.
      *
      * @param message the message to log
      * @throws NullPointerException whenever <tt>level</tt> or <tt>message</tt> is null
@@ -509,7 +509,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed <tt>arg</tt>
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Warning}.
+     * at level {@link com.noctarius.lazylog.Level#Warning}.
      *
      * @param format the format to log
      * @param arg    the argument to pass to the format
@@ -521,7 +521,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Warning}.
+     * at level {@link com.noctarius.lazylog.Level#Warning}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -534,7 +534,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Warning}.
+     * at level {@link com.noctarius.lazylog.Level#Warning}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -548,7 +548,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Warning}.
+     * at level {@link com.noctarius.lazylog.Level#Warning}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -562,7 +562,7 @@ public interface Logger {
     }
 
     /**
-     * Logs a <tt>message</tt> at level {@link com.noctarius.tengi.spi.logging.Level#Warning}. The
+     * Logs a <tt>message</tt> at level {@link com.noctarius.lazylog.Level#Warning}. The
      * given throwable will also be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -575,7 +575,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed <tt>arg</tt>
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Warning}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Warning}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -589,7 +589,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Warning}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Warning}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -604,7 +604,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Warning}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Warning}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -620,7 +620,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Warning}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Warning}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -636,7 +636,7 @@ public interface Logger {
     }
 
     /**
-     * Logs a <tt>message</tt> at level {@link com.noctarius.tengi.spi.logging.Level#Fatal}.
+     * Logs a <tt>message</tt> at level {@link com.noctarius.lazylog.Level#Fatal}.
      *
      * @param message the message to log
      * @throws NullPointerException whenever <tt>level</tt> or <tt>message</tt> is null
@@ -647,7 +647,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed <tt>arg</tt>
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Fatal}.
+     * at level {@link com.noctarius.lazylog.Level#Fatal}.
      *
      * @param format the format to log
      * @param arg    the argument to pass to the format
@@ -659,7 +659,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Fatal}.
+     * at level {@link com.noctarius.lazylog.Level#Fatal}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -672,7 +672,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Fatal}.
+     * at level {@link com.noctarius.lazylog.Level#Fatal}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -686,7 +686,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Fatal}.
+     * at level {@link com.noctarius.lazylog.Level#Fatal}.
      *
      * @param format the format to log
      * @param arg1   the first argument to pass to the format
@@ -700,7 +700,7 @@ public interface Logger {
     }
 
     /**
-     * Logs a <tt>message</tt> at level {@link com.noctarius.tengi.spi.logging.Level#Fatal}. The
+     * Logs a <tt>message</tt> at level {@link com.noctarius.lazylog.Level#Fatal}. The
      * given throwable will also be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -713,7 +713,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed <tt>arg</tt>
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Fatal}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Fatal}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -727,7 +727,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Fatal}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Fatal}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -742,7 +742,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Fatal}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Fatal}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log
@@ -758,7 +758,7 @@ public interface Logger {
 
     /**
      * Logs a message based on the given <tt>format</tt> and enriched with the passed arguments
-     * at level {@link com.noctarius.tengi.spi.logging.Level#Fatal}. The given throwable will also
+     * at level {@link com.noctarius.lazylog.Level#Fatal}. The given throwable will also
      * be logged if configured but does not need to be set.
      *
      * @param throwable the <tt>Throwable</tt> to log

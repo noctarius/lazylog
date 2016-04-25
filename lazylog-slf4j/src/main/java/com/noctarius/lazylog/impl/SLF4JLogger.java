@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015-2016, Christoph Engelbert (aka noctarius) and
+ * Copyright (c) 2016, Christoph Engelbert (aka noctarius) and
  * contributors. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,9 +16,9 @@
  */
 package com.noctarius.lazylog.impl;
 
-import com.noctarius.tengi.core.impl.Validate;
-import com.noctarius.tengi.spi.logging.Level;
-import com.noctarius.tengi.spi.logging.Logger;
+import com.noctarius.lazylog.Level;
+import com.noctarius.lazylog.Logger;
+import com.noctarius.lazylog.util.Validate;
 
 import java.util.function.Supplier;
 
