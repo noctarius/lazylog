@@ -55,13 +55,6 @@
 
   <dependencyManagement>
     <dependencies>
-      <!-- project dependencies -->
-      <dependency>
-        <groupId>com.noctarius.lazylog</groupId>
-        <artifactId>lazylog-api</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-
       <!-- logging framework dependencies -->
       <dependency>
         <groupId>org.slf4j</groupId>

@@ -30,6 +30,7 @@
         <dependency>
             <groupId>com.noctarius.lazylog</groupId>
             <artifactId>lazylog-api</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <!-- external dependencies -->
